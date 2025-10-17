@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Website với Chatbot Coze</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #a8edea, #fed6e3);
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    header {
+      background: #ffffffaa;
+      backdrop-filter: blur(5px);
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 28px;
+      color: #333;
+    }
+
+    main {
+      flex: 1;
+      text-align: center;
+      padding: 50px 20px;
+    }
+
+    main h2 {
+      font-size: 24px;
+      color: #444;
+      margin-bottom: 10px;
+    }
+
+    main p {
+      font-size: 16px;
+      color: #555;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    footer {
+      text-align: center;
+      padding: 15px;
+      background: rgba(255, 255, 255, 0.7);
+      font-size: 14px;
+      color: #444;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Chào mừng đến với trang web của bạn!</h1>
+  </header>
+
+  <main>
+    <h2>Chatbot đã được tích hợp sẵn</h2>
+    <p>Bạn có thể tương tác với chatbot ở góc dưới màn hình.</p>
+  </main>
+
+  <footer>
+    © 2025 - Website có tích hợp Coze Chatbot
+  </footer>
+
+  <!-- ✅ ĐOẠN CHATBOT -->
+  <script src="https://sf-cdn.coze.com/obj/unpkg-va/flow-platform/chat-app-sdk/1.2.0-beta.6/libs/oversea/index.js"></script>
+  <script>
+    new CozeWebSDK.WebChatClient({
+      config: {
+        bot_id: '7560208977481777168',
+      },
+      componentProps: {
+        title: 'Coze',
+      },
+      auth: {
+        type: 'token',
+        token: 'pat_pat_tlEhNTlZm8TTmDTd5JawnNLHyf6J2WxvOP9PTA30dPcouE3wYSq6rUtqfbPCw4lX',  // Thay bằng token thật
+        onRefreshToken: function () {
+          return 'pat_********'; // Thay bằng token thật
+        }
+      }
+    });
+  </script>
+</body>
+</html>
